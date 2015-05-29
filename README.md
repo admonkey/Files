@@ -57,7 +57,7 @@ Installing Files is simple.
 ## Customization and Extension
 Files plays well with its sibling packages:
 
-- [Ownable](https://github.com/kenarkose/Ownable) Ownership for Eloquent Models.
+- [Ownable](https://github.com/kenarkose/Ownable) Easy ownership for Eloquent Models.
 - [Transit](https://github.com/kenarkose/Transit) Easy file uploading and downloading.
 
 Please check the package documentations to implement the functionality.
