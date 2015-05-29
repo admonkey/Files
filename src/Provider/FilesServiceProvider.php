@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class FilesServiceProvider extends ServiceProvider {
 
-    const version = '0.9.1';
+    const version = '0.9.2';
 
     /**
      * Indicates if loading of the provider is deferred.

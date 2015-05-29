@@ -9,6 +9,16 @@ use Kenarkose\Files\Contract\Determine\ModelDeterminer as ModelDeterminerContrac
 class ModelDeterminer implements ModelDeterminerContract {
 
     /**
+     * @var Repository
+     */
+    protected $config;
+
+    /**
+     * @var string
+     */
+    protected $defaultMediaModel = 'Kenarkose\Files\Media\Media';
+
+    /**
      * @var array
      */
     protected $mediaTypes = [
@@ -54,6 +64,11 @@ class ModelDeterminer implements ModelDeterminerContract {
         {
             $this->modelTypes = $modelTypes;
         }
+
+        if ($defaultMediaModel = $this->config->get('files.media_model'))
+        {
+            $this->defaultMediaModel = $defaultMediaModel;
+        }
     }
 
     /**
@@ -95,7 +110,7 @@ class ModelDeterminer implements ModelDeterminerContract {
      */
     public function getDefaultMediaModelName()
     {
-        return $this->config->get('files.media_model', 'Kenarkose\Files\Media\Media');
+        return $this->defaultMediaModel;
     }
 
 }
