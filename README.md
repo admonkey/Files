@@ -10,7 +10,7 @@ Easy media management for Laravel 5.
 - Clean API for media management
 - Media substitution (mainly for audio and video files)
 - Directories
-- Auto determination of media types and STI (Single Table Inheritance) based media models.
+- Auto determination of media types and STI (Single Table Inheritance) based media models
 - Customization options for file mime types and media models
 - Generator for default migrations
 - A [phpunit](http://www.phpunit.de) test suite for easy development
