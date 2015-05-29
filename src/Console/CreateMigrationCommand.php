@@ -67,7 +67,7 @@ class CreateMigrationCommand extends Command {
 
         $filepath = base_path() . '/database/migrations/' . date('Y_m_d_His') . '_files_create_' . $table . '_table.php';
 
-        $output = view('_transit::migrations.' . $table)->render();
+        $output = view('_files::migrations.' . $table)->render();
 
         if ( ! file_exists($filepath))
         {

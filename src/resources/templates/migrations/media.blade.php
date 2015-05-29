@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMediaTable extends Migration {
+class FilesCreateMediaTable extends Migration {
 
     /**
      * Run the migrations.
