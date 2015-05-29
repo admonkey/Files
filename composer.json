@@ -1,6 +1,6 @@
 {
     "name": "kenarkose/files",
-    "description": "Flexible file and media management for Laravel 5",
+    "description": "Easy media management for Laravel 5",
     "license": "MIT",
     "keywords": [
         "kenarkose",
