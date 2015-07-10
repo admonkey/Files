@@ -20,11 +20,10 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "laravel/framework": ">=5.0.0"
+        "php": ">=5.4.0"
     },
     "require-dev": {
-        "orchestra/testbench": "~3.1",
+        "orchestra/testbench": "~3.0",
         "phpunit/phpunit": "~4.0",
         "mockery/mockery": "0.9.*"
     },
@@ -39,6 +38,7 @@
         ]
     },
     "suggest": {
+        "laravel/framework": "This package requires Laravel 5.",
         "kenarkose/transit": "Easy file upload and download for Laravel 5.",
         "kenarkose/ownable": "Allows ownership for Eloquent models on Laravel 5."
     },
