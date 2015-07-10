@@ -3,10 +3,12 @@ Easy media management for Laravel 5.
 
 ---
 [![Build Status](https://travis-ci.org/kenarkose/Files.svg?branch=master)](https://travis-ci.org/kenarkose/Files)
-[![Total Downloads](https://img.shields.io/packagist/dt/kenarkose/Files.svg)](https://packagist.org/packages/kenarkose/Files)
-[![Latest Stable Version](http://img.shields.io/packagist/v/kenarkose/Files.svg)](https://packagist.org/packages/kenarkose/Files)
+[![Total Downloads](https://poser.pugx.org/kenarkose/Files/downloads)](https://packagist.org/packages/kenarkose/Files)
+[![Latest Stable Version](https://poser.pugx.org/kenarkose/Files/version)](https://packagist.org/packages/kenarkose/Files)
+[![License](https://poser.pugx.org/kenarkose/Files/license)](https://packagist.org/packages/kenarkose/Files)
 
 ## Features
+- Compatible with Laravel 5.0 and 5.1
 - Clean API for media management
 - Media substitution (mainly for audio and video files)
 - Directories
