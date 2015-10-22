@@ -7,14 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class FilesServiceProvider extends ServiceProvider {
 
-    const version = '0.9.3';
-
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = true;
+    const version = '1.0.0';
 
     /**
      * Register the service provider.
@@ -51,18 +44,6 @@ class FilesServiceProvider extends ServiceProvider {
         $this->publishes([
             dirname(__DIR__) . '/resources/config.php' => config_path('files.php')
         ]);
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [
-            'files.model_determiner'
-        ];
     }
 
     /**

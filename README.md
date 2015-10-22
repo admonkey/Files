@@ -25,7 +25,7 @@ Installing Files is simple.
     ```js
     {
         "require": {
-            "kenarkose/files": "0.9.*"
+            "kenarkose/files": "1.0.*"
         }
     }
     ```
