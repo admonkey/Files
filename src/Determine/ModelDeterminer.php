@@ -37,7 +37,7 @@ class ModelDeterminer implements ModelDeterminerContract {
     {
         $this->config = $config;
 
-        $this->modelTypes = $this->config->get('files.media_types',
+        $this->mediaTypes = $this->config->get('files.media_types',
             [
                 'audio'    => [
                     'audio/aac', 'audio/mp4', 'audio/mpeg', 'audio/ogg', 'audio/wav', 'audio/webm'
@@ -53,7 +53,8 @@ class ModelDeterminer implements ModelDeterminerContract {
                 ],
                 'video'    => [
                     'video/mp4', 'video/ogg', 'video/webm'
-                ]]);
+                ]
+            ]);
 
         $this->modelTypes = $this->config->get('files.model_types',
             [
