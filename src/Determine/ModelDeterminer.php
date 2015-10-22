@@ -16,35 +16,17 @@ class ModelDeterminer implements ModelDeterminerContract {
     /**
      * @var string
      */
-    protected $defaultMediaModel = 'Kenarkose\Files\Media\Media';
+    protected $defaultMediaModel;
 
     /**
      * @var array
      */
-    protected $mediaTypes = [
-        'audio'    => [
-            'audio/aac', 'audio/mp4', 'audio/mpeg', 'audio/ogg', 'audio/wav', 'audio/webm'
-        ],
-        'document' => [
-            'text/plain', 'application/pdf', 'application/msword', 'application/vnd.ms-excel', 'application/vnd.ms-powerpoint'
-        ],
-        'image'    => [
-            'image/jpeg', 'image/gif', 'image/png', 'image/bmp', 'image/svg+xml'
-        ],
-        'video'    => [
-            'video/mp4', 'video/ogg', 'video/webm'
-        ]
-    ];
+    protected $mediaTypes;
 
     /**
      * @var array
      */
-    protected $modelTypes = [
-        'audio'    => 'Kenarkose\Files\Media\Audio',
-        'document' => 'Kenarkose\Files\Media\Document',
-        'image'    => 'Kenarkose\Files\Media\Image',
-        'video'    => 'Kenarkose\Files\Media\Video'
-    ];
+    protected $modelTypes;
 
     /**
      * Constructor
@@ -55,20 +37,33 @@ class ModelDeterminer implements ModelDeterminerContract {
     {
         $this->config = $config;
 
-        if ($mediaTypes = $this->config->get('files.media_types'))
-        {
-            $this->modelTypes = $mediaTypes;
-        }
+        $this->modelTypes = $this->config->get('files.media_types',
+            [
+                'audio'    => [
+                    'audio/aac', 'audio/mp4', 'audio/mpeg', 'audio/ogg', 'audio/wav', 'audio/webm'
+                ],
+                'document' => [
+                    'text/plain', 'application/pdf', 'application/msword', 'application/vnd.ms-excel', 'application/vnd.ms-powerpoint',
+                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                    'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+                ],
+                'image'    => [
+                    'image/jpeg', 'image/gif', 'image/png', 'image/bmp', 'image/svg+xml'
+                ],
+                'video'    => [
+                    'video/mp4', 'video/ogg', 'video/webm'
+                ]]);
 
-        if ($modelTypes = $this->config->get('files.model_types'))
-        {
-            $this->modelTypes = $modelTypes;
-        }
+        $this->modelTypes = $this->config->get('files.model_types',
+            [
+                'audio'    => 'Kenarkose\Files\Media\Audio',
+                'document' => 'Kenarkose\Files\Media\Document',
+                'image'    => 'Kenarkose\Files\Media\Image',
+                'video'    => 'Kenarkose\Files\Media\Video'
+            ]);
 
-        if ($defaultMediaModel = $this->config->get('files.media_model'))
-        {
-            $this->defaultMediaModel = $defaultMediaModel;
-        }
+        $this->defaultMediaModel = $this->config->get('files.media_model', 'Kenarkose\Files\Media\Media');
     }
 
     /**
