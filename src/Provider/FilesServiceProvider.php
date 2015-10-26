@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class FilesServiceProvider extends ServiceProvider {
 
-    const version = '1.0.2';
+    const version = '1.0.3';
 
     /**
      * Register the service provider.
@@ -51,8 +51,11 @@ class FilesServiceProvider extends ServiceProvider {
      */
     protected function registerCommands()
     {
-        $this->commands([
-            'Kenarkose\Files\Console\CreateMigrationCommand'
-        ]);
+        if ($this->app->runningInConsole())
+        {
+            $this->commands([
+                'Kenarkose\Files\Console\CreateMigrationCommand'
+            ]);
+        }
     }
 }
