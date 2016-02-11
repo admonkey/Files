@@ -7,7 +7,24 @@ use Illuminate\Support\ServiceProvider;
 
 class FilesServiceProvider extends ServiceProvider {
 
-    const version = '1.0.3';
+    const version = '1.0.4';
+
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+    protected $defer = true;
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return ['files.model_determiner'];
+    }
 
     /**
      * Register the service provider.
@@ -47,15 +64,12 @@ class FilesServiceProvider extends ServiceProvider {
     }
 
     /**
-     * Registers Transit helper commands
+     * Registers Files helper commands
      */
     protected function registerCommands()
     {
-        if ($this->app->runningInConsole())
-        {
-            $this->commands([
-                'Kenarkose\Files\Console\CreateMigrationCommand'
-            ]);
-        }
+        $this->commands([
+            'Kenarkose\Files\Console\CreateMigrationCommand'
+        ]);
     }
 }
