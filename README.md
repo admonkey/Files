@@ -8,7 +8,7 @@ Easy media management for Laravel 5.
 [![License](https://poser.pugx.org/kenarkose/Files/license)](https://packagist.org/packages/kenarkose/Files)
 
 ## Features
-- Compatible with Laravel 5.0 and 5.1
+- Compatible with Laravel 5
 - Clean API for media management
 - Media substitution (mainly for audio and video files)
 - Directories
@@ -25,7 +25,7 @@ Installing Files is simple.
     ```js
     {
         "require": {
-            "kenarkose/files": "1.0.*"
+            "kenarkose/files": "~1.0"
         }
     }
     ```
