@@ -10,7 +10,7 @@
         "laravel",
         "laravel5"
     ],
-    "version": "2.0.0",
+    "version": "2.0.1",
     "authors": [
         {
             "name": "Hyleeh",
@@ -24,7 +24,7 @@
         "laracasts/presenter": "0.2.*"
     },
     "require-dev": {
-        "orchestra/testbench": "~3.0",
+        "orchestra/testbench": "~3.1",
         "phpunit/phpunit": "~4.0",
         "mockery/mockery": "0.9.*"
     },
