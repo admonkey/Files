@@ -10,8 +10,9 @@ Easy media management for Laravel 5.
 ## Features
 - Compatible with Laravel 5
 - Clean API for media management
-- Media substitution (mainly for audio and video files)
-- Directories
+- Media substitution (for audio and video files)
+- Recursive Directories for containing media
+- Building blocks for easy
 - Auto determination of media types and STI (Single Table Inheritance) based media models
 - Customization options for file mime types and media models
 - Generator for default migrations
@@ -25,7 +26,7 @@ Installing Files is simple.
     ```js
     {
         "require": {
-            "kenarkose/files": "~1.0"
+            "kenarkose/files": "~2.0"
         }
     }
     ```

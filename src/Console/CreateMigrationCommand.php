@@ -65,7 +65,7 @@ class CreateMigrationCommand extends Command {
     {
         $table = strtolower($table);
 
-        $filepath = base_path() . '/database/migrations/' . date('Y_m_d_His') . '_files_create_' . $table . '_table.php';
+        $filepath = base_path() . '/database/migrations/' . date('Y_m_d_His') . '_FilesCreate' . studly_case($table) . 'Table.php';
 
         $output = view('_files::migrations.' . $table)->render();
 

@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class FilesServiceProvider extends ServiceProvider {
 
-    const version = '1.1.0';
+    const version = '2.0.0';
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -54,13 +54,16 @@ class FilesServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        // This is for model and migration templates
-        // we use blade engine to generate these files
-        $this->loadViewsFrom(dirname(__DIR__) . '/resources/templates', '_files');
+        if ( ! $this->app->environment('production'))
+        {
+            // This is for model and migration templates
+            // we use blade engine to generate these files
+            $this->loadViewsFrom(dirname(__DIR__) . '/resources/templates', '_files');
 
-        $this->publishes([
-            dirname(__DIR__) . '/resources/config.php' => config_path('files.php')
-        ]);
+            $this->publishes([
+                dirname(__DIR__) . '/resources/config.php' => config_path('files.php')
+            ]);
+        }
     }
 
     /**
