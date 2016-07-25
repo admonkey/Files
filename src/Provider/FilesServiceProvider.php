@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class FilesServiceProvider extends ServiceProvider {
 
-    const version = '2.0.1';
+    const version = '2.0.2';
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -71,8 +71,11 @@ class FilesServiceProvider extends ServiceProvider {
      */
     protected function registerCommands()
     {
-        $this->commands([
-            'Kenarkose\Files\Console\CreateMigrationCommand'
-        ]);
+        if ( ! $this->app->environment('production'))
+        {
+            $this->commands([
+                'Kenarkose\Files\Console\CreateMigrationCommand'
+            ]);
+        }
     }
 }
