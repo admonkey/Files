@@ -20,6 +20,7 @@ class CreateMediaTable extends Migration {
             $table->string('extension');
             $table->string('mimetype');
             $table->bigInteger('size')->unsigned();
+            $table->text('metadata')->default('{}');
 
             $table->string('type')->index()->nullable();
             $table->integer('directory_id')->unsigned()->nullable();

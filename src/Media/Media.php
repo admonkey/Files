@@ -27,7 +27,7 @@ class Media extends Eloquent implements ContainableContract {
      *
      * @var array
      */
-    protected $fillable = ['extension', 'mimetype', 'size', 'name', 'path'];
+    protected $fillable = ['extension', 'mimetype', 'size', 'name', 'path', 'metadata'];
 
     /**
      * Syntactic sugar for moveToContainer
