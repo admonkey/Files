@@ -31,14 +31,17 @@ Installing Files is simple.
     }
     ```
 
-2. In order to register Files Service Provider add `'Kenarkose\Files\Provider\FilesServiceProvider'` to the end of `providers` array in your `config/app.php` file.
+2. In order to register Files Service Provider add `Kenarkose\Files\Provider\FilesServiceProvider::class` to the end of `providers` array in your `config/app.php` file.
     ```php
     'providers' => array(
     
-        'Illuminate\Foundation\Providers\ArtisanServiceProvider',
-        'Illuminate\Auth\AuthServiceProvider',
+        /*
+         * Application Service Providers...
+         */
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
         ...
-        'Kenarkose\Files\Provider\FilesServiceProvider',
+        Kenarkose\Files\Provider\FilesServiceProvider::class,
     
     ),
     ```
