@@ -56,7 +56,7 @@ Installing Files is simple.
     ```bash
     php artisan vendor:publish
     ```
-    Than, you will find the configuration file on the `config/files.php` path. Additional information about the options can be found in the comments of this file. All of the options in the config file are optional, and falls back to default if not specified; remove an option if you would like to use the default.
+    Then, you will find the configuration file on the `config/files.php` path. Additional information about the options can be found in the comments of this file. All of the options in the config file are optional, and falls back to default if not specified; remove an option if you would like to use the default.
 
 5. Please check the tests and source code for further documentation.
 
