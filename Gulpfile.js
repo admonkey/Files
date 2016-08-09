@@ -24,7 +24,7 @@ gulp.task('test', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(['tests/**/*.php'], ['test']);
+    gulp.watch(['tests/**/*.php', 'src/**/*.php'], ['test']);
 });
 
 gulp.task('default', ['test', 'watch']);
